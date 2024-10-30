@@ -1,0 +1,289 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .task-list-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .title {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Search Input */
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Filter Controls */
+  .filter-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .filter-controls select,
+  .filter-controls input[type="date"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1; /* Make all filter elements flexible */
+  }
+  
+  /* Buttons */
+  .add-task-button,
+  .edit-task-button,
+  .submit-button,
+  .cancel-button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .add-task-button {
+    background-color: #28a745; /* Green */
+  }
+  
+  .edit-task-button {
+    background-color: #007bff; /* Blue */
+  }
+  
+  .submit-button {
+    background-color: #007bff; /* Blue */
+  }
+  
+  .cancel-button {
+    background-color: #dc3545; /* Red */
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better focus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure modal is on top */
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative; /* For close button positioning */
+  }
+  
+  .modal-content h2 {
+    margin: 0 0 20px; /* Space below title */
+  }
+  
+  .modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #dc3545; /* Red for close button */
+  }
+  
+  .task-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task-form label {
+    margin-bottom: 10px;
+  }
+  
+  /* Task List Styles */
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+  }
+  
+  .task-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1; /* Lighten on hover */
+  }
+  
+  .task-link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .task-link h3 {
+    margin: 0;
+  }
+  
+  /* Comments section styles */
+  .comments {
+    margin-top: 15px;
+  }
+  
+  .comments input {
+    width: calc(100% - 120px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .comments button {
+    padding: 10px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .comments button:hover {
+    background-color: #0056b3; /* Darker blue */
+  }
+  
+  /* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better focus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure modal is on top */
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 30px; /* More padding for a spacious feel */
+    border-radius: 8px; /* Slightly larger border-radius */
+    width: 400px;
+    max-width: 90%; /* Responsive width for smaller screens */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    position: relative; /* For close button positioning */
+    transition: transform 0.3s ease; /* Smooth transition for modal open */
+  }
+  
+  .modal-content h2 {
+    margin: 0 0 20px; /* Space below title */
+    font-size: 1.5rem; /* Larger font size for emphasis */
+    color: #333; /* Darker color for better contrast */
+    text-align: center; /* Center align the title */
+  }
+  
+  .modal-content .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 22px; /* Slightly larger close button */
+    cursor: pointer;
+    color: #dc3545; /* Red for close button */
+    transition: color 0.3s; /* Smooth transition on hover */
+  }
+  
+  .modal-content .close:hover {
+    color: #a71d2a; /* Darker red on hover */
+  }
+  
+  .task-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task-form label {
+    margin-bottom: 10px;
+    font-weight: bold; /* Bold labels for better readability */
+    color: #555; /* Lighter color for labels */
+  }
+  
+  .task-form input,
+  .task-form select {
+    padding: 5px; /* Increased padding for inputs */
+    margin-bottom: 5px; /* Space between fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; /* Consistent font size */
+  }
+  
+  .task-form input:focus,
+  .task-form select:focus {
+    border-color: #007bff; /* Highlight border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  .task-form button {
+    padding: 10px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Consistent font size for buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+  }
+  
+  .task-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .task-form button.cancel-button {
+    background-color: #dc3545; /* Red for cancel button */
+  }
+  
+  .task-form button.cancel-button:hover {
+    background-color: #a71d2a; /* Darker red on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .filter-controls {
+      flex-direction: column;
+    }
+  
+    .filter-controls select,
+    .filter-controls input[type="date"] {
+      margin-bottom: 10px;
+    }
+  
+    .modal-content {
+      width: 90%; /* Responsive width for modal */
+      margin: 0 10px; /* Add margin for smaller screens */
+    }
+  }
+  
